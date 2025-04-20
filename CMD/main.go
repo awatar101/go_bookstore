@@ -12,6 +12,7 @@ import (
 func main() {
 	r := mux.NewRouter()
 	routes.RegisterBookStoreRoutes(r)
+	//routes.bookstoreroutes(r)
 	http.Handle("/", r)
 	log.Fatal(http.ListenAndServe("localhost:9010", r))
 	// log.Fatal(http.ListenAndServe("localhost:9010", f)) // Listen on port 9010 and serve the router
